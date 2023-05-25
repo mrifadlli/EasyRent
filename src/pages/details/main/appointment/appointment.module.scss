@@ -1,0 +1,55 @@
+.appointment_section {
+  display: flex;
+  flex-direction: row;
+
+  margin: 50px 0;
+  padding: 25px;
+
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    background-color: rgb(17 17 17/0.25);
+    -webkit-backdrop-filter: blur(5rem) brightness(0.75);
+    backdrop-filter: blur(5rem) brightness(0.75);
+  }
+  border: 1px solid var(--clr-grey);
+  border-radius: 10px;
+  > div {
+    width: 100%;
+    &:first-child {
+      // padding: 25px;
+      > h2 {
+        background: linear-gradient(45deg, #4aa5ff, #4affff, #6e6efc, #ffa54a);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: rgba(255, 255, 255, 0.5);
+        // text-decoration: underline;
+
+        font-weight: bold;
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+.container {
+  > form {
+    > button {
+      float: right;
+    }
+    > .input_container {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 5px;
+      align-items: center;
+      > h3 {
+        font-size: 1.25rem;
+        padding: 5px 0;
+        grid-column: 1 / span 2;
+      }
+      > label {
+        margin-right: 5px;
+        text-align: end;
+        color: hsl(0, 0%, 65%);
+      }
+    }
+  }
+}

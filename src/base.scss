@@ -1,0 +1,131 @@
+:root {
+  --sz-nav_height: 65px;
+
+  --clr-main-bg: black;
+  --clr-main: hsl(0, 0%, 85%);
+  --clr-grey: hsla(0, 0%, 50%, 0.5);
+  font-size: 1em;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: var(--clr-main);
+
+  font-family: 'Atkinson Hyperlegible', 'Segoe UI', Tahoma, Geneva, Verdana,
+    sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+body {
+  background-color: var(--clr-main-bg);
+}
+
+#root {
+  // position: absolute;
+  // bottom: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+select {
+  padding: 10px 20px;
+  border-radius: calc(1rem + 5px);
+  border-radius: 10px;
+  border: 1px solid var(--clr-grey);
+
+  background-color: var(--clr-main-bg);
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: calc(1rem + 5px);
+  border: 2px solid var(--clr-grey);
+  // border: 10px solid hsl(0, 0%, 0%, 0.5);
+  // background: linear-gradient(297.03deg, #4588c4 14.23%, #23588c 81.67%);
+  // background: linear-gradient(90deg, #2b44a8 0%, #2e63c9 75%);
+  // background: linear-gradient(45deg, #4aa5ff, #4affff, #6e6efc, #ffa54a);
+  background: linear-gradient(
+    45deg,
+    hsl(210, 75%, 65%),
+    hsl(180, 75%, 65%),
+    hsl(260, 75%, 65%),
+    hsl(30, 75%, 65%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+button.reg {
+  background: none;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  color: var(--clr-main);
+
+  border-radius: 10px;
+  border: 1px solid var(--clr-grey);
+}
+
+input,
+textarea {
+  background-color: var(--clr-main-bg);
+  border: 1px solid var(--clr-grey);
+  border-radius: 10px;
+  padding: 10px;
+  text-transform: none;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 1px solid var(--clr-grey);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.content_wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+
+  @media only screen and (max-width: 991px) {
+    padding: 0 25px;
+  }
+}
+
+.no_drag {
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.background_def {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
